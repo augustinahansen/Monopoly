@@ -1,0 +1,33 @@
+//Augustina Hansen
+//3/17/2022
+//AP Computer Science
+//Monopoly Game (Board) 
+
+public class Board {
+	
+   int currentTurn = 0; //who's turn it is 
+	
+   int totalPlayer = 0; //number of players
+	
+   Player[] players; //
+	
+   Square[] squares = new Square[40]; //amount of squares on the board
+	
+   String[] names = new String[] { "House", "Thimble", "Dog", "Horse"}; //name of the players
+   
+   
+   //Method to determine player's turn
+   
+   public Board(int totalPlayer) {
+		
+      players = new Player[totalPlayer];
+		
+      this.totalPlayer = totalPlayer;
+      
+      for(int i = 0;i < players.length;i++){
+			
+         players[i] = new Player(i, "Player " + (i + 1));
+		}
+		
+      
+  
